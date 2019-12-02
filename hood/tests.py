@@ -65,3 +65,69 @@ class BuinessTestClass(TestCase):
 
 
 
+class UserprofileTestClass(TestCase):
+    #Set up method
+    def setUp(self):
+        self.new_userprofile =Userprofile(profile_image="image.jpeg",email="profile@gmail.com")
+
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_userprofile,Userprofile))
+
+    #Testing Save Method
+    def test_save_method(self):
+        self.new_userprofile.save_userprofile()
+        userprofiles=Userprofile.objects.all()
+        self.assertTrue(len(userprofiles)>0)
+
+    def test_delete_method(self):
+        self.new_userprofile.save_userprofile()
+        self.new_userprofile.delete_userprofile()
+
+
+
+class PostTestClass(TestCase):
+
+
+    def setUp(self):
+        self.new_post=Post(post_image="image.jpeg",title="Security",post="Don't waste water")
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_post,Post))
+
+
+    def test_save_method(self):
+
+        self.new_post.save_post()
+        posts = Post.objects.all()
+        self.assertTrue(len(posts) > 0)
+
+    def test_delete_method(self):
+
+        self.new_post.save_post()
+        self.new_post.delete_post()
+
+
+class CommentTestCase(TestCase):
+    '''
+    setup
+    '''
+    def setUp(self):
+        self.new_comment = Comment(comment='Thank you')
+    '''
+    test instance of comment
+    '''
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_comment,Comment))
+        '''
+        test for save instance of comment
+        '''
+    def test_save_comment(self):
+        self.comment.save_comment()
+        name = Comment.objects.all()
+        self.assertTrue(len(name)>0)
+
+    def test_delete_method(self):
+
+        self.new_comment.save_comment()
+        self.new_comment.delete_comment()
