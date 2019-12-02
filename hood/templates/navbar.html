@@ -1,55 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 
 
-<nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">HOODWATCH</a>
+
+    <style>
+        .nav{
+        background:#35424a;
+        color: #ffffff
+        }
+        </style>
+  <nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{%url 'index'%}">Home</a>
+      <a class="navbar-brand" href="/admin">Admin</a>
+
+      <a class="navbar-brand" href="{%url 'business'%}">Business</a>
+
+      <a class="navbar-brand" href="{%url 'post'%}">Post</a>
+
+    <a class="navbar-brand" href="{%url 'contacts'%}">Police and health </a>
+    <a class="navbar-brand" class="dropdown-toggle"  data-toggle="dropdown" href="#">Busineses Neighborhood<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'neighbourhood' 40 %}">Ngumba</a></li>
+      <li><a href="{% url 'neighbourhood' 41 %}">Juja</a></li>
+      <li><a href="{% url 'neighbourhood' 42 %}">Thika</a></li>
+
+      </ul>
+
+    </div>
+
+      <div class="col-sm-4 col-md-4 navbar-right">
+            {% if user.is_authenticated %}
+
+                <a class="navbar-brand" href="{%url 'profile'%}">Profile</a>
+
+
+                    <a class="navbar-brand"href="/accounts/password/change">Change Password</a>
+
+
+                    <a class="navbar-brand"href="/logout">Logout</a>
+
+
+
+
+
+            {% else %}
+
+              <a class="navbar-brand" class='btn btn-default' href="/accounts/login">Login</a>
+
+            {% endif %}
           </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">VIEW PROFILE<span class="sr-only">(current)</span></a></li>
-              <li><a href="#">VIEW HOODS</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accounts<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+          <!-- Adding a search form  -->
+      <div class="col-sm-4 col-md-4">
+
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Business" name="business">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <!-- search form end -->
+  </div>
+</nav>
+
+
+</body>
+</html>
+
+
