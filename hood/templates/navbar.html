@@ -7,30 +7,22 @@
 </head>
 <body>
 
-
-
-    <style>
-        .nav{
-        background:#35424a;
-        color: #ffffff
-        }
-        </style>
-  <nav class="navbar">
-  <div class="container-fluid">
+  <nav class="navbar"  style="background-color: black;">
+  <div class="container-fluid" >
     <div class="navbar-header">
-      <a class="navbar-brand" href="{%url 'index'%}">Home</a>
-      <a class="navbar-brand" href="/admin">Admin</a>
+      <a class="navbar-brand" href="{%url 'index'%}" style="color:honeydew">Home</a>
+      <a class="navbar-brand" href="/admin" style="color:honeydew">Admin</a>
 
-      <a class="navbar-brand" href="{%url 'business'%}">Business</a>
+      <a class="navbar-brand" href="{%url 'business'%}"style="color:honeydew">Business</a>
 
-      <a class="navbar-brand" href="{%url 'post'%}">Post</a>
+      <a class="navbar-brand" href="{%url 'post'%}"style="color:honeydew">Post</a>
 
-    <a class="navbar-brand" href="{%url 'contacts'%}">Police and health </a>
-    <a class="navbar-brand" class="dropdown-toggle"  data-toggle="dropdown" href="#">Busineses Neighborhood<span class="caret"></span></a>
+    <a class="navbar-brand" href="{%url 'contacts'%}" style="color:honeydew">Police and health </a>
+    <a class="navbar-brand" class="dropdown-toggle"  data-toggle="dropdown" href="#" style="color:honeydew">Busineses Neighborhood<span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="{% url 'neighbourhood' 40 %}">Ngumba</a></li>
-      <li><a href="{% url 'neighbourhood' 41 %}">Juja</a></li>
-      <li><a href="{% url 'neighbourhood' 42 %}">Thika</a></li>
+        <li><a href="{% url 'neighbourhood' 40 %}" >Buruburu</a></li>
+      <li><a href="{% url 'neighbourhood' 41 %}">kayole</a></li>
+      <li><a href="{% url 'neighbourhood' 42 %}">Donholm</a></li>
 
       </ul>
 
@@ -39,13 +31,13 @@
       <div class="col-sm-4 col-md-4 navbar-right">
             {% if user.is_authenticated %}
 
-                <a class="navbar-brand" href="{%url 'profile'%}">Profile</a>
+                <a class="navbar-brand" href="{%url 'profile'%}" style="color:honeydew">Profile</a>
 
 
-                    <a class="navbar-brand"href="/accounts/password/change">Change Password</a>
+                    <a class="navbar-brand"href="/accounts/password/change" style="color:honeydew">Change Password</a>
 
 
-                    <a class="navbar-brand"href="/logout">Logout</a>
+                    <a class="navbar-brand"href="/logout" style="color:honeydew">Logout</a>
 
 
 
