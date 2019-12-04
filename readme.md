@@ -14,7 +14,7 @@ This is a  neighbourhood watch application
 
 | Behavior            | Input                         | Output                        |
 | ------------------- | ----------------------------- | ----------------------------- |
-| enter our page | login with your username | you are taken to our homepage |
+| enter our page | login with your ushttps://hodeno.herokuapp.com/ername | you are taken to our homepage |
 | add business | Click on the the business  | you are taken to the file where you can add your business and email infomation |
 | Search | Search business | Redirects you to the searched business and its information |
 | edit profile | you are taken to where you can upload your profile | you profile appears |
