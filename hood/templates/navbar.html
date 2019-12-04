@@ -12,17 +12,17 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="{%url 'index'%}" style="color:honeydew">Home</a>
       <a class="navbar-brand" href="/admin" style="color:honeydew">Admin</a>
-      <a class="navbar-brand" href="{%url 'post'%}"style="color:honeydew">Post</a>
+
       <a class="navbar-brand" href="{%url 'business'%}"style="color:honeydew">Business</a>
 
-      
+      <a class="navbar-brand" href="{%url 'post'%}"style="color:honeydew">Post</a>
 
-    <a class="navbar-brand" class="dropdown-toggle"  data-toggle="dropdown" href="#" style="color:honeydew">Busineses Neighborhood<span class="caret"></span></a>
     <a class="navbar-brand" href="{%url 'contacts'%}" style="color:honeydew">Police</a>
+    <a class="navbar-brand" class="dropdown-toggle"  data-toggle="dropdown" href="#" style="color:honeydew">Busineses Neighborhood<span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="{% url 'neighbourhood'  %}" >Buruburu</a></li>
-      <li><a href="{% url 'neighbourhood' %}">kayole</a></li>
-      <li><a href="{% url 'neighbourhood' %}">Donholm</a></li>
+        <li><a href="{% url 'neighbourhood' 40 %}" >Buruburu</a></li>
+      <li><a href="{% url 'neighbourhood' 41 %}">kayole</a></li>
+      <li><a href="{% url 'neighbourhood' 42 %}">Donholm</a></li>
 
       </ul>
 
