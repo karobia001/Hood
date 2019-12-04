@@ -5,7 +5,7 @@
 This is a  neighbourhood watch application
 
 
-![App live Image]( media/profile/app.png "our Award application")
+![App live Image]( media/posts/screen.png "our Hood application")
 
 
 
@@ -15,15 +15,14 @@ This is a  neighbourhood watch application
 | Behavior            | Input                         | Output                        |
 | ------------------- | ----------------------------- | ----------------------------- |
 | enter our page | login with your username | you are taken to our homepage |
-| add business | Click on the add project | you are taken to the add project page where you fill in the spaces provided |
-| Search | Search project name| Redirects you to the projects information profile page |
-| Rating | Click on the picture | take the user to the rating page where you rate the project |
+| add business | Click on the the business  | you are taken to the file where you can add your business and email infomation |
+| Search | Search business | Redirects you to the searched business and its information |
+| edit profile | you are taken to where you can upload your profile | you profile appears |
 
 
 ## Live link
 
-https://dennoward.herokuapp.com/
-
+https://hodeno.herokuapp.com/
 ### Prerequsites
     - Python 3.6
     - Ubuntu software
@@ -32,7 +31,7 @@ https://dennoward.herokuapp.com/
 ### Clone the Repo
 Run the following command on the terminal:
 
-`git clone https://github.com/karobia001/Awwards.git`
+`git clone https://github.com/karobia001/Hood`
 
 Install  [Postgres](https://www.postgresql.org/download/)
  
@@ -53,24 +52,6 @@ psql
 
 CREATE DATABASE <database_name>;
 
-```
-
-### .env file
-
-```
-SECRET_KEY = '<Secret_key>'
-DBNAME = '<database_name>'
-USER = '<Username>'
-PASSWORD = '<password>'
-DEBUG = True
-
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = '<your-email>'
-EMAIL_HOST_PASSWORD = '<your-password>'
-
-```
 
 ## Run initial Migration
 ```
